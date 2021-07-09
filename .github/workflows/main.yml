@@ -37,7 +37,7 @@ jobs:
         uses: bridgecrewio/yor-action@main
         with:
           config_file: tag_groups.yaml
-          commit_changes: NO
+          commit_changes: YES
       - name: Set up Python 3.8
         uses: actions/setup-python@v1
         with:
