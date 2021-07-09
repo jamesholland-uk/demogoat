@@ -5,11 +5,11 @@ resource aws_ecr_repository "repository" {
 
   tags = {
     demo-owner           = "james"
-    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_commit           = "1028590e2f0ce4081bdb8ee091f0b6e5323f8ba1"
     git_file             = "terraform/aws/ecr.tf"
-    git_last_modified_at = "2021-06-17 14:06:28"
-    git_last_modified_by = "eurogig@gmail.com"
-    git_modifiers        = "eurogig"
+    git_last_modified_at = "2021-07-09 12:53:57"
+    git_last_modified_by = "jamoiholland@gmail.com"
+    git_modifiers        = "eurogig/jamoiholland"
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "2764c6ef-5c26-4361-9d0a-0fb11dba2f84"

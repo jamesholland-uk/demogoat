@@ -9,11 +9,11 @@ resource "aws_s3_bucket" "data" {
 
   tags = {
     demo-owner           = "james"
-    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_commit           = "1028590e2f0ce4081bdb8ee091f0b6e5323f8ba1"
     git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2021-06-17 14:06:28"
-    git_last_modified_by = "eurogig@gmail.com"
-    git_modifiers        = "eurogig"
+    git_last_modified_at = "2021-07-09 12:53:57"
+    git_last_modified_by = "jamoiholland@gmail.com"
+    git_modifiers        = "eurogig/jamoiholland"
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "2cb80ef8-3b46-443d-8e86-e2ee7daf1c72"
@@ -27,11 +27,11 @@ resource "aws_s3_bucket_object" "data_object" {
 
   tags = {
     demo-owner           = "james"
-    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_commit           = "1028590e2f0ce4081bdb8ee091f0b6e5323f8ba1"
     git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2021-06-17 14:06:28"
-    git_last_modified_by = "eurogig@gmail.com"
-    git_modifiers        = "eurogig"
+    git_last_modified_at = "2021-07-09 12:53:57"
+    git_last_modified_by = "jamoiholland@gmail.com"
+    git_modifiers        = "eurogig/jamoiholland"
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "eaa81e9c-7646-442b-a345-fadaabc369d2"
@@ -97,11 +97,11 @@ resource "aws_s3_bucket" "data_science" {
 
   tags = {
     demo-owner           = "james"
-    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_commit           = "1028590e2f0ce4081bdb8ee091f0b6e5323f8ba1"
     git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2021-06-17 14:06:28"
-    git_last_modified_by = "eurogig@gmail.com"
-    git_modifiers        = "eurogig"
+    git_last_modified_at = "2021-07-09 12:53:57"
+    git_last_modified_by = "jamoiholland@gmail.com"
+    git_modifiers        = "eurogig/jamoiholland"
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "a073cda6-2110-4d28-8b6f-8d59b7844592"
@@ -126,11 +126,11 @@ resource "aws_s3_bucket" "logs" {
 
   tags = {
     demo-owner           = "james"
-    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_commit           = "1028590e2f0ce4081bdb8ee091f0b6e5323f8ba1"
     git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2021-06-17 14:06:28"
-    git_last_modified_by = "eurogig@gmail.com"
-    git_modifiers        = "eurogig"
+    git_last_modified_at = "2021-07-09 12:53:57"
+    git_last_modified_by = "jamoiholland@gmail.com"
+    git_modifiers        = "eurogig/jamoiholland"
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "a8b3d530-556c-47c4-ac0b-7301ffae40ea"
