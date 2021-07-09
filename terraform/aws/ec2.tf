@@ -18,6 +18,17 @@ export AWS_DEFAULT_REGION=us-west-2
 echo "<h1>Deployed via Terraform</h1>" | sudo tee /var/www/html/index.html
 EOF
 
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2021-06-17 14:06:28"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "52d4bd72-edc6-4fa7-abf1-9f5da452c1d2"
+  }
 }
 
 resource "aws_ebs_volume" "web_host_storage" {
@@ -26,6 +37,17 @@ resource "aws_ebs_volume" "web_host_storage" {
   #encrypted         = false  # Setting this causes the volume to be recreated on apply 
   size = 1
 
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2021-06-17 14:06:28"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "b6ea56b2-98e9-4b4d-a10f-7f724d5dfabd"
+  }
 }
 
 resource "aws_ebs_snapshot" "example_snapshot" {
@@ -33,6 +55,17 @@ resource "aws_ebs_snapshot" "example_snapshot" {
   volume_id   = "${aws_ebs_volume.web_host_storage.id}"
   description = "${local.resource_prefix.value}-ebs-snapshot"
 
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2021-06-17 14:06:28"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "63807a6c-295d-43f5-a1e5-cda0e4975681"
+  }
 }
 
 resource "aws_volume_attachment" "ebs_att" {
@@ -70,6 +103,17 @@ resource "aws_security_group" "web-node" {
   }
   depends_on = [aws_vpc.web_vpc]
 
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2021-06-17 14:06:28"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "26bca37c-3d41-474e-95c5-a3f8ae11d3dd"
+  }
 }
 
 resource "aws_vpc" "web_vpc" {
@@ -77,6 +121,17 @@ resource "aws_vpc" "web_vpc" {
   enable_dns_hostnames = true
   enable_dns_support   = true
 
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2021-06-17 14:06:28"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "6f40fb4b-b496-4c0e-98c3-5c5256cf46c6"
+  }
 }
 
 resource "aws_subnet" "web_subnet" {
@@ -86,6 +141,17 @@ resource "aws_subnet" "web_subnet" {
   map_public_ip_on_launch = true
 
 
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2021-06-17 14:06:28"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "37a46618-5123-4ffc-a6b8-2440f5ca86b9"
+  }
 }
 
 resource "aws_subnet" "web_subnet2" {
@@ -95,6 +161,17 @@ resource "aws_subnet" "web_subnet2" {
   map_public_ip_on_launch = true
 
 
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2021-06-17 14:06:28"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "812d9f1b-2c68-4687-8bd4-09c7f17e3856"
+  }
 }
 
 
@@ -102,12 +179,34 @@ resource "aws_internet_gateway" "web_igw" {
   vpc_id = aws_vpc.web_vpc.id
 
 
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2021-06-17 14:06:28"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "95176ac0-1df8-4cbf-8b2c-d1592b3ce84c"
+  }
 }
 
 resource "aws_route_table" "web_rtb" {
   vpc_id = aws_vpc.web_vpc.id
 
 
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2021-06-17 14:06:28"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "65ae627c-0399-4422-8a11-06646b62a05f"
+  }
 }
 
 resource "aws_route_table_association" "rtbassoc" {
@@ -135,6 +234,17 @@ resource "aws_network_interface" "web-eni" {
   subnet_id   = aws_subnet.web_subnet.id
   private_ips = ["172.16.10.100"]
 
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2021-06-17 14:06:28"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "b5e552e5-b25c-47b0-bbe1-6bca70da4f3b"
+  }
 }
 
 # VPC Flow Logs to S3
@@ -145,6 +255,17 @@ resource "aws_flow_log" "vpcflowlogs" {
   vpc_id               = aws_vpc.web_vpc.id
 
 
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2021-06-17 14:06:28"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "1fa5ccf3-c8f2-4be3-8d34-a2c2ab2ee333"
+  }
 }
 
 resource "aws_s3_bucket" "flowbucket" {
@@ -152,6 +273,17 @@ resource "aws_s3_bucket" "flowbucket" {
   force_destroy = true
 
 
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2021-06-17 14:06:28"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "e0af0f56-e354-4f6d-950e-830583e009c2"
+  }
 }
 
 output "ec2_public_dns" {

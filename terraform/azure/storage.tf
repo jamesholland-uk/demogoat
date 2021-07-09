@@ -8,6 +8,17 @@ resource "azurerm_managed_disk" "example" {
   encryption_settings {
     enabled = false
   }
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "2384d4d87f0d949f4e7c31718827a92ad9fdc27d"
+    git_file             = "terraform/azure/storage.tf"
+    git_last_modified_at = "2021-06-17 14:08:57"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "008da894-f841-40ce-9ba9-8dec2f72ecae"
+  }
 }
 
 resource "azurerm_storage_account" "example" {
@@ -36,6 +47,17 @@ resource "azurerm_storage_account" "example" {
       version               = "1.0"
       retention_policy_days = 10
     }
+  }
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "2384d4d87f0d949f4e7c31718827a92ad9fdc27d"
+    git_file             = "terraform/azure/storage.tf"
+    git_last_modified_at = "2021-06-17 14:08:57"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "4de04e14-b193-4bd6-974b-0ebb494f643d"
   }
 }
 
