@@ -24,6 +24,17 @@ resource "aws_db_instance" "default" {
   lifecycle {
     ignore_changes = ["password"]
   }
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2021-06-17 14:06:28"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "be15d8f6-902d-47db-8c39-78106cb7dd63"
+  }
 }
 
 resource "aws_db_option_group" "default" {
@@ -31,6 +42,17 @@ resource "aws_db_option_group" "default" {
   name                     = "og-${local.resource_prefix.value}"
   major_engine_version     = "8.0"
   option_group_description = "Terraform OG"
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2021-06-17 14:06:28"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "2b0fa724-141f-4bcf-8288-3f755987075e"
+  }
 }
 
 resource "aws_db_parameter_group" "default" {
@@ -50,6 +72,17 @@ resource "aws_db_parameter_group" "default" {
     apply_method = "immediate"
   }
 
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2021-06-17 14:06:28"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "0bf48ffd-fb24-4d56-9788-01aa5e137cf6"
+  }
 }
 
 resource "aws_db_subnet_group" "default" {
@@ -57,11 +90,33 @@ resource "aws_db_subnet_group" "default" {
   subnet_ids  = ["${aws_subnet.web_subnet.id}", "${aws_subnet.web_subnet2.id}"]
   description = "Terraform DB Subnet Group"
 
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2021-06-17 14:06:28"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "c777f721-16b8-4d5a-b270-6852569eaf23"
+  }
 }
 
 resource "aws_security_group" "default" {
   name   = "${local.resource_prefix.value}-rds-sg"
   vpc_id = aws_vpc.web_vpc.id
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2021-06-17 14:06:28"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "56f286c3-9a1f-4c19-a17a-15b73af06e28"
+  }
 }
 
 resource "aws_security_group_rule" "ingress" {
@@ -87,6 +142,17 @@ resource "aws_security_group_rule" "egress" {
 resource "aws_iam_instance_profile" "ec2profile" {
   name = "${local.resource_prefix.value}-profile"
   role = "${aws_iam_role.ec2role.name}"
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2021-06-17 14:06:28"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "674fd80b-038b-48b7-aa9f-ceef939e756d"
+  }
 }
 
 resource "aws_iam_role" "ec2role" {
@@ -110,6 +176,17 @@ resource "aws_iam_role" "ec2role" {
 EOF
 
 
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2021-06-17 14:06:28"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "7c7f6cdd-1ca4-4000-af18-0885909e6f02"
+  }
 }
 
 resource "aws_iam_role_policy" "ec2policy" {
@@ -307,7 +384,18 @@ sudo chown root:root /var/www/html/index.php
 
 
 EOF
-  
+
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2021-06-17 14:06:28"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "2960d388-ac0d-40c3-b6fa-e1b599e6ec2d"
+  }
 }
 
 output "db_app_public_dns" {

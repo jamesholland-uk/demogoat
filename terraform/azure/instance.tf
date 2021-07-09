@@ -26,6 +26,17 @@ resource azurerm_linux_virtual_machine "linux_machine" {
     storage_account_type = "Standard_LRS"
   }
 
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "2384d4d87f0d949f4e7c31718827a92ad9fdc27d"
+    git_file             = "terraform/azure/instance.tf"
+    git_last_modified_at = "2021-06-17 14:08:57"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "81a47dde-d96f-4789-a2c7-e01ea7991304"
+  }
 }
 
 resource azurerm_windows_virtual_machine "windows_machine" {
@@ -48,4 +59,15 @@ resource azurerm_windows_virtual_machine "windows_machine" {
     version   = "latest"
   }
 
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "2384d4d87f0d949f4e7c31718827a92ad9fdc27d"
+    git_file             = "terraform/azure/instance.tf"
+    git_last_modified_at = "2021-06-17 14:08:57"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "1eeb8378-86b2-439a-85b7-08ae1cde6560"
+  }
 }

@@ -17,6 +17,17 @@ resource "aws_iam_role" "iam_for_lambda" {
 }
 EOF
 
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file             = "terraform/aws/lambda.tf"
+    git_last_modified_at = "2021-06-17 14:06:28"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "3c9e9d95-10da-4886-9221-c6a3d0b3f410"
+  }
 }
 
 resource "aws_lambda_function" "analysis_lambda" {
@@ -37,4 +48,15 @@ resource "aws_lambda_function" "analysis_lambda" {
     }
   }
 
+  tags = {
+    demo-owner           = "james"
+    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file             = "terraform/aws/lambda.tf"
+    git_last_modified_at = "2021-06-17 14:06:28"
+    git_last_modified_by = "eurogig@gmail.com"
+    git_modifiers        = "eurogig"
+    git_org              = "jamesholland-uk"
+    git_repo             = "demogoat"
+    yor_trace            = "60d688a6-cc9e-41a6-adcf-03a4ff6b41af"
+  }
 }

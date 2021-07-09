@@ -19,6 +19,10 @@ resource aws_iam_role "iam_for_eks" {
   name               = "${local.resource_prefix.value}-iam-for-eks"
   assume_role_policy = data.aws_iam_policy_document.iam_policy_eks.json
 
+  tags = {
+    demo-owner = "james"
+    yor_trace  = "4e2c274e-6bdd-4b1a-a710-8307ca23054a"
+  }
 }
 
 resource aws_iam_role_policy_attachment "policy_attachment-AmazonEKSClusterPolicy" {
@@ -36,6 +40,10 @@ resource aws_vpc "eks_vpc" {
   enable_dns_hostnames = true
   enable_dns_support   = true
 
+  tags = {
+    demo-owner = "james"
+    yor_trace  = "2652d82a-7ca3-4728-abf0-2c38996ba7c5"
+  }
 }
 
 resource aws_subnet "eks_subnet1" {
@@ -44,40 +52,48 @@ resource aws_subnet "eks_subnet1" {
   availability_zone       = var.availability_zone
   map_public_ip_on_launch = true
   tags = {
-    Name                                                  = "${local.resource_prefix.value}-eks-subnet"
-    "kubernetes.io/cluster/${local.eks_name.value}"       = "shared"
-    git_commit                                            = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
-    git_file                                              = "terraform/aws/eks.tf"
-    git_last_modified_at                                  = "2021-06-17 14:06:28"
-    git_last_modified_by                                  = "eurogig@gmail.com"
-    git_modifiers                                         = "eurogig"
-    git_org                                               = "eurogig"
-    git_repo                                              = "demogoat"
-    "kubernetes.io/cluster/$${local.eks_name.value}"      = "shared"
-    level                                                 = "production"
-    pci-dss                                               = "true"
-    team                                                  = "platform"
-    yor_trace                                             = "812601e6-90a4-416e-8105-45d6139b0755"
-    "kubernetes.io/cluster/$$${local.eks_name.value}"     = "shared"
-    "kubernetes.io/cluster/$${local.eks_name.value}"      = "shared"
-    "kubernetes.io/cluster/$$$${local.eks_name.value}"    = "shared"
-    "kubernetes.io/cluster/$$${local.eks_name.value}"     = "shared"
-    "kubernetes.io/cluster/$${local.eks_name.value}"      = "shared"
-    "kubernetes.io/cluster/$$$$${local.eks_name.value}"   = "shared"
-    "kubernetes.io/cluster/$$$${local.eks_name.value}"    = "shared"
-    "kubernetes.io/cluster/$$${local.eks_name.value}"     = "shared"
-    "kubernetes.io/cluster/$${local.eks_name.value}"      = "shared"
-    "kubernetes.io/cluster/$$$$$${local.eks_name.value}"  = "shared"
-    "kubernetes.io/cluster/$$$$${local.eks_name.value}"   = "shared"
-    "kubernetes.io/cluster/$$$${local.eks_name.value}"    = "shared"
-    "kubernetes.io/cluster/$$${local.eks_name.value}"     = "shared"
-    "kubernetes.io/cluster/$${local.eks_name.value}"      = "shared"
-    "kubernetes.io/cluster/$$$$$$${local.eks_name.value}" = "shared"
-    "kubernetes.io/cluster/$$$$$${local.eks_name.value}"  = "shared"
-    "kubernetes.io/cluster/$$$$${local.eks_name.value}"   = "shared"
-    "kubernetes.io/cluster/$$$${local.eks_name.value}"    = "shared"
-    "kubernetes.io/cluster/$$${local.eks_name.value}"     = "shared"
-    "kubernetes.io/cluster/$${local.eks_name.value}"      = "shared"
+    Name                                                   = "${local.resource_prefix.value}-eks-subnet"
+    "kubernetes.io/cluster/${local.eks_name.value}"        = "shared"
+    git_commit                                             = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file                                               = "terraform/aws/eks.tf"
+    git_last_modified_at                                   = "2021-06-17 14:06:28"
+    git_last_modified_by                                   = "eurogig@gmail.com"
+    git_modifiers                                          = "eurogig"
+    git_org                                                = "eurogig"
+    git_repo                                               = "demogoat"
+    "kubernetes.io/cluster/$${local.eks_name.value}"       = "shared"
+    level                                                  = "production"
+    pci-dss                                                = "true"
+    team                                                   = "platform"
+    yor_trace                                              = "812601e6-90a4-416e-8105-45d6139b0755"
+    "kubernetes.io/cluster/$$${local.eks_name.value}"      = "shared"
+    "kubernetes.io/cluster/$${local.eks_name.value}"       = "shared"
+    "kubernetes.io/cluster/$$$${local.eks_name.value}"     = "shared"
+    "kubernetes.io/cluster/$$${local.eks_name.value}"      = "shared"
+    "kubernetes.io/cluster/$${local.eks_name.value}"       = "shared"
+    "kubernetes.io/cluster/$$$$${local.eks_name.value}"    = "shared"
+    "kubernetes.io/cluster/$$$${local.eks_name.value}"     = "shared"
+    "kubernetes.io/cluster/$$${local.eks_name.value}"      = "shared"
+    "kubernetes.io/cluster/$${local.eks_name.value}"       = "shared"
+    "kubernetes.io/cluster/$$$$$${local.eks_name.value}"   = "shared"
+    "kubernetes.io/cluster/$$$$${local.eks_name.value}"    = "shared"
+    "kubernetes.io/cluster/$$$${local.eks_name.value}"     = "shared"
+    "kubernetes.io/cluster/$$${local.eks_name.value}"      = "shared"
+    "kubernetes.io/cluster/$${local.eks_name.value}"       = "shared"
+    "kubernetes.io/cluster/$$$$$$${local.eks_name.value}"  = "shared"
+    "kubernetes.io/cluster/$$$$$${local.eks_name.value}"   = "shared"
+    "kubernetes.io/cluster/$$$$${local.eks_name.value}"    = "shared"
+    "kubernetes.io/cluster/$$$${local.eks_name.value}"     = "shared"
+    "kubernetes.io/cluster/$$${local.eks_name.value}"      = "shared"
+    "kubernetes.io/cluster/$${local.eks_name.value}"       = "shared"
+    demo-owner                                             = "james"
+    "kubernetes.io/cluster/$$$$$$$${local.eks_name.value}" = "shared"
+    "kubernetes.io/cluster/$$$$$$${local.eks_name.value}"  = "shared"
+    "kubernetes.io/cluster/$$$$$${local.eks_name.value}"   = "shared"
+    "kubernetes.io/cluster/$$$$${local.eks_name.value}"    = "shared"
+    "kubernetes.io/cluster/$$$${local.eks_name.value}"     = "shared"
+    "kubernetes.io/cluster/$$${local.eks_name.value}"      = "shared"
+    "kubernetes.io/cluster/$${local.eks_name.value}"       = "shared"
   }
 }
 
@@ -87,40 +103,48 @@ resource aws_subnet "eks_subnet2" {
   availability_zone       = var.availability_zone2
   map_public_ip_on_launch = true
   tags = {
-    Name                                                  = "${local.resource_prefix.value}-eks-subnet2"
-    "kubernetes.io/cluster/${local.eks_name.value}"       = "shared"
-    git_commit                                            = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
-    git_file                                              = "terraform/aws/eks.tf"
-    git_last_modified_at                                  = "2021-06-17 14:06:28"
-    git_last_modified_by                                  = "eurogig@gmail.com"
-    git_modifiers                                         = "eurogig"
-    git_org                                               = "eurogig"
-    git_repo                                              = "demogoat"
-    "kubernetes.io/cluster/$${local.eks_name.value}"      = "shared"
-    level                                                 = "production"
-    pci-dss                                               = "true"
-    team                                                  = "platform"
-    yor_trace                                             = "2c310c80-bdae-4c04-a63d-b3a96cda65aa"
-    "kubernetes.io/cluster/$$${local.eks_name.value}"     = "shared"
-    "kubernetes.io/cluster/$${local.eks_name.value}"      = "shared"
-    "kubernetes.io/cluster/$$$${local.eks_name.value}"    = "shared"
-    "kubernetes.io/cluster/$$${local.eks_name.value}"     = "shared"
-    "kubernetes.io/cluster/$${local.eks_name.value}"      = "shared"
-    "kubernetes.io/cluster/$$$$${local.eks_name.value}"   = "shared"
-    "kubernetes.io/cluster/$$$${local.eks_name.value}"    = "shared"
-    "kubernetes.io/cluster/$$${local.eks_name.value}"     = "shared"
-    "kubernetes.io/cluster/$${local.eks_name.value}"      = "shared"
-    "kubernetes.io/cluster/$$$$$${local.eks_name.value}"  = "shared"
-    "kubernetes.io/cluster/$$$$${local.eks_name.value}"   = "shared"
-    "kubernetes.io/cluster/$$$${local.eks_name.value}"    = "shared"
-    "kubernetes.io/cluster/$$${local.eks_name.value}"     = "shared"
-    "kubernetes.io/cluster/$${local.eks_name.value}"      = "shared"
-    "kubernetes.io/cluster/$$$$$$${local.eks_name.value}" = "shared"
-    "kubernetes.io/cluster/$$$$$${local.eks_name.value}"  = "shared"
-    "kubernetes.io/cluster/$$$$${local.eks_name.value}"   = "shared"
-    "kubernetes.io/cluster/$$$${local.eks_name.value}"    = "shared"
-    "kubernetes.io/cluster/$$${local.eks_name.value}"     = "shared"
-    "kubernetes.io/cluster/$${local.eks_name.value}"      = "shared"
+    Name                                                   = "${local.resource_prefix.value}-eks-subnet2"
+    "kubernetes.io/cluster/${local.eks_name.value}"        = "shared"
+    git_commit                                             = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
+    git_file                                               = "terraform/aws/eks.tf"
+    git_last_modified_at                                   = "2021-06-17 14:06:28"
+    git_last_modified_by                                   = "eurogig@gmail.com"
+    git_modifiers                                          = "eurogig"
+    git_org                                                = "eurogig"
+    git_repo                                               = "demogoat"
+    "kubernetes.io/cluster/$${local.eks_name.value}"       = "shared"
+    level                                                  = "production"
+    pci-dss                                                = "true"
+    team                                                   = "platform"
+    yor_trace                                              = "2c310c80-bdae-4c04-a63d-b3a96cda65aa"
+    "kubernetes.io/cluster/$$${local.eks_name.value}"      = "shared"
+    "kubernetes.io/cluster/$${local.eks_name.value}"       = "shared"
+    "kubernetes.io/cluster/$$$${local.eks_name.value}"     = "shared"
+    "kubernetes.io/cluster/$$${local.eks_name.value}"      = "shared"
+    "kubernetes.io/cluster/$${local.eks_name.value}"       = "shared"
+    "kubernetes.io/cluster/$$$$${local.eks_name.value}"    = "shared"
+    "kubernetes.io/cluster/$$$${local.eks_name.value}"     = "shared"
+    "kubernetes.io/cluster/$$${local.eks_name.value}"      = "shared"
+    "kubernetes.io/cluster/$${local.eks_name.value}"       = "shared"
+    "kubernetes.io/cluster/$$$$$${local.eks_name.value}"   = "shared"
+    "kubernetes.io/cluster/$$$$${local.eks_name.value}"    = "shared"
+    "kubernetes.io/cluster/$$$${local.eks_name.value}"     = "shared"
+    "kubernetes.io/cluster/$$${local.eks_name.value}"      = "shared"
+    "kubernetes.io/cluster/$${local.eks_name.value}"       = "shared"
+    "kubernetes.io/cluster/$$$$$$${local.eks_name.value}"  = "shared"
+    "kubernetes.io/cluster/$$$$$${local.eks_name.value}"   = "shared"
+    "kubernetes.io/cluster/$$$$${local.eks_name.value}"    = "shared"
+    "kubernetes.io/cluster/$$$${local.eks_name.value}"     = "shared"
+    "kubernetes.io/cluster/$$${local.eks_name.value}"      = "shared"
+    "kubernetes.io/cluster/$${local.eks_name.value}"       = "shared"
+    demo-owner                                             = "james"
+    "kubernetes.io/cluster/$$$$$$$${local.eks_name.value}" = "shared"
+    "kubernetes.io/cluster/$$$$$$${local.eks_name.value}"  = "shared"
+    "kubernetes.io/cluster/$$$$$${local.eks_name.value}"   = "shared"
+    "kubernetes.io/cluster/$$$$${local.eks_name.value}"    = "shared"
+    "kubernetes.io/cluster/$$$${local.eks_name.value}"     = "shared"
+    "kubernetes.io/cluster/$$${local.eks_name.value}"      = "shared"
+    "kubernetes.io/cluster/$${local.eks_name.value}"       = "shared"
   }
 }
 
@@ -138,6 +162,10 @@ resource aws_eks_cluster "eks_cluster" {
     "aws_iam_role_policy_attachment.policy_attachment-AmazonEKSServicePolicy",
   ]
 
+  tags = {
+    demo-owner = "james"
+    yor_trace  = "276aac8e-1e15-415f-b101-765492fb04bd"
+  }
 }
 
 output "endpoint" {
