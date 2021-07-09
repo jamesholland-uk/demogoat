@@ -4,6 +4,13 @@ resource google_compute_network "vpc" {
   auto_create_subnetworks = false
 }
 
+resource google_compute_network "vpc" {
+  name                    = "terragoat-${var.environment}-network-2"
+  description             = "Virtual vulnerable-by-design network"
+  auto_create_subnetworks = false
+}
+
+
 resource "google_compute_subnetwork" "public-subnetwork" {
   name          = "terragoat-${var.environment}-public-subnetwork"
   ip_cidr_range = "10.0.0.0/24"
