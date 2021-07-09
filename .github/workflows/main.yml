@@ -35,6 +35,9 @@ jobs:
         env:
           YOR_SIMPLE_TAGS: '{"demo-owner": "james"}'
         uses: bridgecrewio/yor-action@main
+        with:
+          config_file: tag_groups.yaml
+          commit_changes: NO
       - name: Set up Python 3.8
         uses: actions/setup-python@v1
         with:
