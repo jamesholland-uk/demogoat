@@ -13,6 +13,9 @@ resource aws_ecr_repository "repository" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "2764c6ef-5c26-4361-9d0a-0fb11dba2f84"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 

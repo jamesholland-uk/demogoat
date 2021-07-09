@@ -27,6 +27,9 @@ EOF
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "3c9e9d95-10da-4886-9221-c6a3d0b3f410"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -58,5 +61,8 @@ resource "aws_lambda_function" "analysis_lambda" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "60d688a6-cc9e-41a6-adcf-03a4ff6b41af"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }

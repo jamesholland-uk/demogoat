@@ -32,5 +32,8 @@ resource azurerm_kubernetes_cluster "k8s_cluster" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "941a702e-d63c-45cd-a88c-c6a2a4157080"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }

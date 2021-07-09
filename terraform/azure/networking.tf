@@ -13,6 +13,9 @@ resource "azurerm_virtual_network" "example" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "904fa394-5ccc-468f-91ac-5c94b2f09b20"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -43,6 +46,9 @@ resource "azurerm_network_interface" "ni_linux" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "5593f021-cbc5-4fda-b7ad-1cffad546532"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -66,6 +72,9 @@ resource "azurerm_network_interface" "ni_win" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "71b1b16b-d7a7-412b-a4cb-99979642d74a"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -107,6 +116,9 @@ resource azurerm_network_security_group "bad_sg" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "992437d1-2342-4b28-9cee-ae10be3fa080"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -124,6 +136,9 @@ resource azurerm_network_watcher "network_watcher" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "b61225ee-e076-4ce5-b97d-16c9fe7747f3"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -147,5 +162,8 @@ resource azurerm_network_watcher_flow_log "flow_log" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "6ac1fa33-7d7d-4fba-aa2e-06dd9ac0e022"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }

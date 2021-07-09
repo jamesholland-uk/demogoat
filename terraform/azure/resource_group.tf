@@ -11,5 +11,8 @@ resource "azurerm_resource_group" "example" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "306963c3-1805-448c-b0bf-f58461def42c"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }

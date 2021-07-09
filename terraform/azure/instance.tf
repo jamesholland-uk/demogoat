@@ -36,6 +36,9 @@ resource azurerm_linux_virtual_machine "linux_machine" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "81a47dde-d96f-4789-a2c7-e01ea7991304"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -69,5 +72,8 @@ resource azurerm_windows_virtual_machine "windows_machine" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "1eeb8378-86b2-439a-85b7-08ae1cde6560"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }

@@ -25,6 +25,9 @@ resource "aws_elasticsearch_domain" "monitoring-framework" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "1d5a7a80-6161-459e-98e4-aeaf0c33d271"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 

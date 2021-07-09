@@ -36,5 +36,8 @@ resource "aws_elb" "weblb" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "a3b6c43d-a836-4e24-978c-f1df55ced062"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }

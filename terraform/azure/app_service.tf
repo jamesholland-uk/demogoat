@@ -17,6 +17,9 @@ resource azurerm_app_service_plan "example" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "2d44bf6d-66a5-4569-bc6f-0b622a918ec4"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -39,6 +42,9 @@ resource azurerm_app_service "app-service1" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "e0703357-ac3c-463e-b2e8-0f459f96d73a"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -62,6 +68,9 @@ resource azurerm_app_service "app-service2" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "69084183-e035-4694-9245-96198bd278f8"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 

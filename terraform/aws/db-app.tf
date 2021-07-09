@@ -34,6 +34,9 @@ resource "aws_db_instance" "default" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "be15d8f6-902d-47db-8c39-78106cb7dd63"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -52,6 +55,9 @@ resource "aws_db_option_group" "default" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "2b0fa724-141f-4bcf-8288-3f755987075e"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -82,6 +88,9 @@ resource "aws_db_parameter_group" "default" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "0bf48ffd-fb24-4d56-9788-01aa5e137cf6"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -100,6 +109,9 @@ resource "aws_db_subnet_group" "default" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "c777f721-16b8-4d5a-b270-6852569eaf23"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -116,6 +128,9 @@ resource "aws_security_group" "default" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "56f286c3-9a1f-4c19-a17a-15b73af06e28"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -152,6 +167,9 @@ resource "aws_iam_instance_profile" "ec2profile" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "674fd80b-038b-48b7-aa9f-ceef939e756d"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -186,6 +204,9 @@ EOF
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "7c7f6cdd-1ca4-4000-af18-0885909e6f02"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -395,6 +416,9 @@ EOF
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "2960d388-ac0d-40c3-b6fa-e1b599e6ec2d"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 

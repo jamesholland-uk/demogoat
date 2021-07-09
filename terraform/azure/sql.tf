@@ -23,6 +23,9 @@ resource "azurerm_sql_server" "example" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "25c20d7b-d464-4a81-8e5b-80fe3476ad59"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -66,6 +69,9 @@ resource "azurerm_mysql_server" "example" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "90704b08-c9f5-4605-ae3d-fd8c7be9f30d"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -92,6 +98,9 @@ resource "azurerm_postgresql_server" "example" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "20454b6e-b1de-495b-ac3a-9d16574ad31e"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 

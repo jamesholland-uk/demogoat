@@ -31,6 +31,9 @@ resource google_compute_instance "server" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "eb453246-823e-4bbb-b4c6-cd81877ff83b"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -46,5 +49,8 @@ resource google_compute_disk "unencrypted_disk" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "15c5f730-b040-4f69-967b-d5056f405738"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }

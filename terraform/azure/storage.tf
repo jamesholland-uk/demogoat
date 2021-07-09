@@ -18,6 +18,9 @@ resource "azurerm_managed_disk" "example" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "008da894-f841-40ce-9ba9-8dec2f72ecae"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -58,6 +61,9 @@ resource "azurerm_storage_account" "example" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "4de04e14-b193-4bd6-974b-0ebb494f643d"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 

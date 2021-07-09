@@ -34,5 +34,8 @@ resource google_bigquery_dataset "dataset" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "01612613-b221-4111-a198-dec10b12ecac"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }

@@ -18,6 +18,9 @@ resource "aws_neptune_cluster" "default" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "9379b51a-98b0-4e0e-8cb7-944bb4c46d3b"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -39,6 +42,9 @@ resource "aws_neptune_cluster_instance" "default" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "8a1fd72e-c6d4-4f19-a5d7-5af9f08aadf6"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 

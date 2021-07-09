@@ -11,6 +11,9 @@ resource "google_storage_bucket" "terragoat_website" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "84cb521b-9c2d-4f29-a2f9-e18c58ee825a"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 

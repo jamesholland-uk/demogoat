@@ -25,6 +25,9 @@ resource "azurerm_key_vault" "example" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "6e4c14e6-d6ac-41ba-a678-fb6969b02fb8"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -51,6 +54,9 @@ resource "azurerm_key_vault_key" "generated" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "055d2300-1a3e-411f-86d1-d546f4bdacff"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -68,5 +74,8 @@ resource "azurerm_key_vault_secret" "secret" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "f81269ba-1284-41ff-86d3-8525c6d33835"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }

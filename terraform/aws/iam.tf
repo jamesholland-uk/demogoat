@@ -12,6 +12,9 @@ resource "aws_iam_user" "user" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "32467a37-5adb-4f6d-90a5-fbfb769c12d0"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 

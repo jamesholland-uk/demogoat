@@ -28,6 +28,9 @@ EOF
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "52d4bd72-edc6-4fa7-abf1-9f5da452c1d2"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -47,6 +50,9 @@ resource "aws_ebs_volume" "web_host_storage" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "b6ea56b2-98e9-4b4d-a10f-7f724d5dfabd"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -65,6 +71,9 @@ resource "aws_ebs_snapshot" "example_snapshot" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "63807a6c-295d-43f5-a1e5-cda0e4975681"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -113,6 +122,9 @@ resource "aws_security_group" "web-node" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "26bca37c-3d41-474e-95c5-a3f8ae11d3dd"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -131,6 +143,9 @@ resource "aws_vpc" "web_vpc" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "6f40fb4b-b496-4c0e-98c3-5c5256cf46c6"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -151,6 +166,9 @@ resource "aws_subnet" "web_subnet" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "37a46618-5123-4ffc-a6b8-2440f5ca86b9"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -171,6 +189,9 @@ resource "aws_subnet" "web_subnet2" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "812d9f1b-2c68-4687-8bd4-09c7f17e3856"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -189,6 +210,9 @@ resource "aws_internet_gateway" "web_igw" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "95176ac0-1df8-4cbf-8b2c-d1592b3ce84c"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -206,6 +230,9 @@ resource "aws_route_table" "web_rtb" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "65ae627c-0399-4422-8a11-06646b62a05f"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -244,6 +271,9 @@ resource "aws_network_interface" "web-eni" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "b5e552e5-b25c-47b0-bbe1-6bca70da4f3b"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -265,6 +295,9 @@ resource "aws_flow_log" "vpcflowlogs" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "1fa5ccf3-c8f2-4be3-8d34-a2c2ab2ee333"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
@@ -283,6 +316,9 @@ resource "aws_s3_bucket" "flowbucket" {
     git_org              = "jamesholland-uk"
     git_repo             = "demogoat"
     yor_trace            = "e0af0f56-e354-4f6d-950e-830583e009c2"
+    level                = "production"
+    pci-dss              = "true"
+    team                 = "cloud-eng"
   }
 }
 
