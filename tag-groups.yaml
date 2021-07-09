@@ -3,15 +3,14 @@ tag_groups:
     tags:
       - name: team
         value:
-          default: interfaces
+          default: engineering
           matches:
-            - seceng:
+            - cloud-eng:
                 tags:
                   git_modifiers:
+                    - jamesholland-uk
                     - eurogig
-                    - tronxd
-                    - mattj
-            - platform:
+            - platform-eng:
                 tags:
                   git_modifiers:
                     - milkana
@@ -26,9 +25,8 @@ tag_groups:
             - production:
                 tags:
                   git_org:
+                    - jamesholland-uk
                     - eurogig
-                    - tronxd
-                    - mattj
             - operations:
                 tags:
                   git_org:
