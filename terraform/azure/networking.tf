@@ -3,19 +3,6 @@ resource "azurerm_virtual_network" "example" {
   address_space       = ["10.0.0.0/16"]
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
-  tags = {
-    git_commit           = "2384d4d87f0d949f4e7c31718827a92ad9fdc27d"
-    git_file             = "terraform/azure/networking.tf"
-    git_last_modified_at = "2021-06-17 14:08:57"
-    git_last_modified_by = "eurogig@gmail.com"
-    git_modifiers        = "eurogig"
-    git_org              = "eurogig"
-    git_repo             = "demogoat"
-    level                = "production"
-    pci-dss              = "true"
-    team                 = "platform"
-    yor_trace            = "6a4dbb61-6a9b-48d0-a821-288932346475"
-  }
 }
 
 resource "azurerm_subnet" "example" {
@@ -35,19 +22,6 @@ resource "azurerm_network_interface" "ni_linux" {
     subnet_id                     = azurerm_subnet.example.id
     private_ip_address_allocation = "Dynamic"
   }
-  tags = {
-    git_commit           = "2384d4d87f0d949f4e7c31718827a92ad9fdc27d"
-    git_file             = "terraform/azure/networking.tf"
-    git_last_modified_at = "2021-06-17 14:08:57"
-    git_last_modified_by = "eurogig@gmail.com"
-    git_modifiers        = "eurogig"
-    git_org              = "eurogig"
-    git_repo             = "demogoat"
-    level                = "production"
-    pci-dss              = "true"
-    team                 = "platform"
-    yor_trace            = "f353661d-9793-46a7-8dd0-1102a6fc5506"
-  }
 }
 
 resource "azurerm_network_interface" "ni_win" {
@@ -59,19 +33,6 @@ resource "azurerm_network_interface" "ni_win" {
     name                          = "internal"
     subnet_id                     = azurerm_subnet.example.id
     private_ip_address_allocation = "Dynamic"
-  }
-  tags = {
-    git_commit           = "2384d4d87f0d949f4e7c31718827a92ad9fdc27d"
-    git_file             = "terraform/azure/networking.tf"
-    git_last_modified_at = "2021-06-17 14:08:57"
-    git_last_modified_by = "eurogig@gmail.com"
-    git_modifiers        = "eurogig"
-    git_org              = "eurogig"
-    git_repo             = "demogoat"
-    level                = "production"
-    pci-dss              = "true"
-    team                 = "platform"
-    yor_trace            = "d9c1f249-025c-4f7c-a834-410668c12671"
   }
 }
 
@@ -103,38 +64,12 @@ resource azurerm_network_security_group "bad_sg" {
     destination_port_range     = "3389-3389"
     destination_address_prefix = "*"
   }
-  tags = {
-    git_commit           = "2384d4d87f0d949f4e7c31718827a92ad9fdc27d"
-    git_file             = "terraform/azure/networking.tf"
-    git_last_modified_at = "2021-06-17 14:08:57"
-    git_last_modified_by = "eurogig@gmail.com"
-    git_modifiers        = "eurogig"
-    git_org              = "eurogig"
-    git_repo             = "demogoat"
-    level                = "production"
-    pci-dss              = "true"
-    team                 = "platform"
-    yor_trace            = "4c9ceffd-a877-4816-9ffe-34120a07437e"
-  }
 }
 
 resource azurerm_network_watcher "network_watcher" {
   location            = var.location
   name                = "terragoat-network-watcher-${var.environment}"
   resource_group_name = azurerm_resource_group.example.name
-  tags = {
-    git_commit           = "2384d4d87f0d949f4e7c31718827a92ad9fdc27d"
-    git_file             = "terraform/azure/networking.tf"
-    git_last_modified_at = "2021-06-17 14:08:57"
-    git_last_modified_by = "eurogig@gmail.com"
-    git_modifiers        = "eurogig"
-    git_org              = "eurogig"
-    git_repo             = "demogoat"
-    level                = "production"
-    pci-dss              = "true"
-    team                 = "platform"
-    yor_trace            = "ce985d60-7885-4125-a5fe-72e31f13433d"
-  }
 }
 
 resource azurerm_network_watcher_flow_log "flow_log" {
@@ -146,15 +81,5 @@ resource azurerm_network_watcher_flow_log "flow_log" {
   retention_policy {
     enabled = false
     days    = 10
-  }
-  tags = {
-    yor_trace            = "1564fb82-0752-4f92-888e-8abcd5db55f8"
-    git_commit           = "2384d4d87f0d949f4e7c31718827a92ad9fdc27d"
-    git_file             = "terraform/azure/networking.tf"
-    git_last_modified_at = "2021-06-17 14:08:57"
-    git_last_modified_by = "eurogig@gmail.com"
-    git_modifiers        = "eurogig"
-    git_org              = "eurogig"
-    git_repo             = "demogoat"
   }
 }

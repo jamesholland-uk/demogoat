@@ -20,22 +20,6 @@ resource "aws_db_instance" "default" {
   monitoring_interval     = 0
   publicly_accessible     = true
 
-  tags = {
-    Name                 = "${local.resource_prefix.value}-rds"
-    Environment          = local.resource_prefix.value
-    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2021-06-17 14:06:28"
-    git_last_modified_by = "eurogig@gmail.com"
-    git_modifiers        = "eurogig"
-    git_org              = "eurogig"
-    git_repo             = "demogoat"
-    level                = "production"
-    pci-dss              = "true"
-    team                 = "platform"
-    yor_trace            = "2092be6d-c2f3-4006-955b-6c5d8fe61d41"
-  }
-
   # Ignore password changes from tf plan diff
   lifecycle {
     ignore_changes = ["password"]
@@ -47,22 +31,6 @@ resource "aws_db_option_group" "default" {
   name                     = "og-${local.resource_prefix.value}"
   major_engine_version     = "8.0"
   option_group_description = "Terraform OG"
-
-  tags = {
-    Name                 = "${local.resource_prefix.value}-og"
-    Environment          = local.resource_prefix.value
-    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2021-06-17 14:06:28"
-    git_last_modified_by = "eurogig@gmail.com"
-    git_modifiers        = "eurogig"
-    git_org              = "eurogig"
-    git_repo             = "demogoat"
-    level                = "production"
-    pci-dss              = "true"
-    team                 = "platform"
-    yor_trace            = "218563fd-cc98-4847-b185-bae71f4c4249"
-  }
 }
 
 resource "aws_db_parameter_group" "default" {
@@ -82,21 +50,6 @@ resource "aws_db_parameter_group" "default" {
     apply_method = "immediate"
   }
 
-  tags = {
-    Name                 = "${local.resource_prefix.value}-pg"
-    Environment          = local.resource_prefix.value
-    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2021-06-17 14:06:28"
-    git_last_modified_by = "eurogig@gmail.com"
-    git_modifiers        = "eurogig"
-    git_org              = "eurogig"
-    git_repo             = "demogoat"
-    level                = "production"
-    pci-dss              = "true"
-    team                 = "platform"
-    yor_trace            = "1bb33897-87cf-4aca-b251-a1f4fd5be4c0"
-  }
 }
 
 resource "aws_db_subnet_group" "default" {
@@ -104,42 +57,11 @@ resource "aws_db_subnet_group" "default" {
   subnet_ids  = ["${aws_subnet.web_subnet.id}", "${aws_subnet.web_subnet2.id}"]
   description = "Terraform DB Subnet Group"
 
-  tags = {
-    Name                 = "sg-${local.resource_prefix.value}"
-    Environment          = local.resource_prefix.value
-    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2021-06-17 14:06:28"
-    git_last_modified_by = "eurogig@gmail.com"
-    git_modifiers        = "eurogig"
-    git_org              = "eurogig"
-    git_repo             = "demogoat"
-    level                = "production"
-    pci-dss              = "true"
-    team                 = "platform"
-    yor_trace            = "ef3b7caf-cc0d-4ad1-924a-9b4e627f84ec"
-  }
 }
 
 resource "aws_security_group" "default" {
   name   = "${local.resource_prefix.value}-rds-sg"
   vpc_id = aws_vpc.web_vpc.id
-
-  tags = {
-    Name                 = "${local.resource_prefix.value}-rds-sg"
-    Environment          = local.resource_prefix.value
-    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2021-06-17 14:06:28"
-    git_last_modified_by = "eurogig@gmail.com"
-    git_modifiers        = "eurogig"
-    git_org              = "eurogig"
-    git_repo             = "demogoat"
-    level                = "production"
-    pci-dss              = "true"
-    team                 = "platform"
-    yor_trace            = "1e429f4c-98a2-488f-9079-d2a7e9313a9b"
-  }
 }
 
 resource "aws_security_group_rule" "ingress" {
@@ -165,19 +87,6 @@ resource "aws_security_group_rule" "egress" {
 resource "aws_iam_instance_profile" "ec2profile" {
   name = "${local.resource_prefix.value}-profile"
   role = "${aws_iam_role.ec2role.name}"
-  tags = {
-    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2021-06-17 14:06:28"
-    git_last_modified_by = "eurogig@gmail.com"
-    git_modifiers        = "eurogig"
-    git_org              = "eurogig"
-    git_repo             = "demogoat"
-    level                = "production"
-    pci-dss              = "true"
-    team                 = "platform"
-    yor_trace            = "3497fac7-1514-42f5-b014-b9caf1ce586d"
-  }
 }
 
 resource "aws_iam_role" "ec2role" {
@@ -200,21 +109,7 @@ resource "aws_iam_role" "ec2role" {
 }
 EOF
 
-  tags = {
-    Name                 = "${local.resource_prefix.value}-role"
-    Environment          = local.resource_prefix.value
-    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2021-06-17 14:06:28"
-    git_last_modified_by = "eurogig@gmail.com"
-    git_modifiers        = "eurogig"
-    git_org              = "eurogig"
-    git_repo             = "demogoat"
-    level                = "production"
-    pci-dss              = "true"
-    team                 = "platform"
-    yor_trace            = "766afcb6-75a1-4a2b-9d51-dfd37af6d892"
-  }
+
 }
 
 resource "aws_iam_role_policy" "ec2policy" {
@@ -412,20 +307,7 @@ sudo chown root:root /var/www/html/index.php
 
 
 EOF
-  tags = {
-    Name                 = "${local.resource_prefix.value}-dbapp"
-    git_commit           = "0468bf147ece4e3f9c72707c02c8bc19aa612071"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2021-06-17 14:06:28"
-    git_last_modified_by = "eurogig@gmail.com"
-    git_modifiers        = "eurogig"
-    git_org              = "eurogig"
-    git_repo             = "demogoat"
-    level                = "production"
-    pci-dss              = "true"
-    team                 = "platform"
-    yor_trace            = "e24f7d51-7d45-4a29-98e7-0ef142fd227d"
-  }
+  
 }
 
 output "db_app_public_dns" {

@@ -13,21 +13,6 @@ resource "azurerm_sql_server" "example" {
   version                      = "12.0"
   administrator_login          = "ariel"
   administrator_login_password = "Aa12345678"
-  tags = {
-    environment          = var.environment
-    terragoat            = "true"
-    git_commit           = "2384d4d87f0d949f4e7c31718827a92ad9fdc27d"
-    git_file             = "terraform/azure/sql.tf"
-    git_last_modified_at = "2021-06-17 14:08:57"
-    git_last_modified_by = "eurogig@gmail.com"
-    git_modifiers        = "eurogig"
-    git_org              = "eurogig"
-    git_repo             = "demogoat"
-    level                = "production"
-    pci-dss              = "true"
-    team                 = "interfaces"
-    yor_trace            = "24a239a5-d253-45dd-9768-eca5fa98df34"
-  }
 }
 
 resource "azurerm_mssql_server_security_alert_policy" "example" {
@@ -60,19 +45,6 @@ resource "azurerm_mysql_server" "example" {
   infrastructure_encryption_enabled = true
   public_network_access_enabled     = true
   ssl_enforcement_enabled           = false
-  tags = {
-    git_commit           = "2384d4d87f0d949f4e7c31718827a92ad9fdc27d"
-    git_file             = "terraform/azure/sql.tf"
-    git_last_modified_at = "2021-06-17 14:08:57"
-    git_last_modified_by = "eurogig@gmail.com"
-    git_modifiers        = "eurogig"
-    git_org              = "eurogig"
-    git_repo             = "demogoat"
-    level                = "production"
-    pci-dss              = "true"
-    team                 = "interfaces"
-    yor_trace            = "cc9ca7ab-8314-4e78-aacd-b2b4841a1893"
-  }
 }
 
 resource "azurerm_postgresql_server" "example" {
@@ -88,19 +60,6 @@ resource "azurerm_postgresql_server" "example" {
   administrator_login_password = "Aa12345678"
   version                      = "9.5"
   ssl_enforcement_enabled      = false
-  tags = {
-    git_commit           = "2384d4d87f0d949f4e7c31718827a92ad9fdc27d"
-    git_file             = "terraform/azure/sql.tf"
-    git_last_modified_at = "2021-06-17 14:08:57"
-    git_last_modified_by = "eurogig@gmail.com"
-    git_modifiers        = "eurogig"
-    git_org              = "eurogig"
-    git_repo             = "demogoat"
-    level                = "production"
-    pci-dss              = "true"
-    team                 = "interfaces"
-    yor_trace            = "d74f0042-ff20-49a5-9053-88716fb524c6"
-  }
 }
 
 resource "azurerm_postgresql_configuration" "thrtottling_config" {
